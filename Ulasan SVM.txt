@@ -1,0 +1,15 @@
+*Note ini digunakan sebagai ulasan dari mekanisme yang terjadi pada model SVM.
+
+Pada data linear, svm bekerja dengan menentukan garis-garis dengan jarak terdekat antar kluster data. 
+Diantara garis-garis yang dapat terbentuk, model akan menentukan garis mana yang memiliki jarak paling jauh.
+Kemudian, kita dapat menentukan garis hyperplane yang dapat mengklasifikasikan antar data, sehingga data
+terpisah menjadi beberapa kluster.
+
+Sedangkan pada data non_linear, model SVM akan menggunakan sebuah trik kernel yaitu trik yang dapat memetakan
+data menjadi data dengan dimensi yang lebih tinggi. Setelah data mengalami kenaikan dimensi, data akan berubah
+menjadi dataset linear. Barulah svm dapat bekerja kembali.
+
+Sebagai tambahan, svm kebanyakan digunakan sebagai binary classification. Akan tetapi, tidak mustahil
+menggunakan svm sebagia multi classification. Sistem yang bekerja dinamakan "one vs rest" yaitu model svm
+akan membentuk sebuah garis hyperplane antar cluster 1 dengan cluster !1, berikut dengan cluster 2 dengan
+cluster !2, sampai cluster n dengan cluster !n, sehingga akan terbentuk sebuah boundary / batasan antar kelas.
